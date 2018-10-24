@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <RelativeLayout
+      android:id="@+id/toolbar_layout"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      >
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_close"
+        android:tint="@color/gray"
+        android:padding="15dp"
+        android:layout_centerVertical="true"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+      <ImageView
+          android:id="@+id/black_color_iv"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:src="@drawable/circle_with_stroke"
+          android:padding="10dp"
+          />
+
+      <ImageView
+          android:id="@+id/red_color_iv"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:src="@drawable/circle_with_stroke"
+          android:tint="@android:color/holo_red_dark"
+          android:padding="10dp"
+          />
+
+      <ImageView
+          android:id="@+id/undo_btn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_undo"
+          android:tint="@color/gray"
+          android:padding="10dp"
+          android:visibility="gone"
+          />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_done"
+        android:tint="@color/gray"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+  </RelativeLayout>
+
+  <View
+      android:id="@+id/shadow_view"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="@color/shadow_gray"
+      android:layout_below="@+id/toolbar_layout"/>
+
+
+
+  <com.droidninja.feedback.imagezoom.ImageViewTouch
+      android:id="@+id/screenshot"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="20dp"
+      android:layout_below="@+id/shadow_view"
+      />
+
+  <com.droidninja.feedback.CustomPaintView
+      android:id="@+id/paintView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignTop="@+id/screenshot"
+      android:layout_alignBottom="@+id/screenshot"
+      android:layout_alignLeft="@+id/screenshot"
+      android:layout_alignRight="@+id/screenshot"
+      android:layout_alignStart="@+id/screenshot"
+      android:layout_alignEnd="@+id/screenshot"
+      />
+
+</RelativeLayout>

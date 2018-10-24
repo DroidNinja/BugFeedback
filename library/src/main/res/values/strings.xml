@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">library</string>
+  <string name="saving_image">Saving image...</string>
+  <string name="include_screenshot_and_logs">Include screenshot and logs</string>
+  <string name="write_a_feedback">Write a feedback</string>
+  <string name="send">Send</string>
+</resources>
